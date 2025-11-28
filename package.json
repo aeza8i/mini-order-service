@@ -1,0 +1,76 @@
+{
+  "name": "mini-order-service",
+  "version": "1.0.0",
+  "description": "Mini Token Exchange Order Service - NestJS + Prisma",
+  "author": "me.ehyaie@gmail.com",
+  "private": true,
+  "license": "UNLICENSED",
+  "scripts": {
+    "build": "nest build",
+    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
+    "start": "nest start",
+    "start:prod": "node dist/main",
+    "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:cov": "jest --coverage",
+    "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
+    "test:e2e": "jest --config ./test/e2e/jest-e2e.json --detectOpenHandles",
+    "test:e2e:cov": "npm run test:e2e -- --coverage",
+    "lint-staged": "lint-staged"
+  },
+  "lint-staged": {
+    "src/**/*.{js,ts}": [
+      "eslint --fix"
+    ]
+  },
+  "dependencies": {
+    "@nestjs/common": "11.1.9",
+    "@nestjs/config": "4.0.2",
+    "@nestjs/core": "11.1.9",
+    "@nestjs/cqrs": "11.0.3",
+    "@nestjs/platform-express": "11.1.9",
+    "@nestjs/swagger": "11.2.3",
+    "@prisma/adapter-better-sqlite3": "7.0.1",
+    "@prisma/client": "7.0.1",
+    "class-transformer": "0.5.1",
+    "class-validator": "0.14.3",
+    "reflect-metadata": "0.2.2",
+    "rxjs": "7.8.2",
+    "swagger-ui-express": "5.0.1",
+    "uuid": "11.1.0"
+  },
+  "devDependencies": {
+    "@nestjs/cli": "11.0.13",
+    "@nestjs/schematics": "11.0.9",
+    "@nestjs/testing": "11.1.9",
+    "@types/better-sqlite3": "7.6.13",
+    "@types/express": "5.0.5",
+    "@types/jest": "30.0.0",
+    "@types/node": "24.10.1",
+    "esbuild": "0.27.0",
+    "jest": "30.2.0",
+    "prisma": "7.0.1",
+    "supertest": "7.1.4",
+    "ts-jest": "29.4.5",
+    "ts-node": "10.9.2",
+    "typescript": "5.9.3"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": "src",
+    "testRegex": ".*\\.spec\\.ts$",
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "collectCoverageFrom": [
+      "**/*.(t|j)s"
+    ],
+    "coverageDirectory": "../coverage",
+    "testEnvironment": "node"
+  }
+}

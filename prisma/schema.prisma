@@ -1,0 +1,39 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client"
+  output   = "../src/shared/generated/prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+enum OrderStatus {
+  PENDING
+  EXECUTED
+  CANCELED
+}
+
+model Order {
+  id               String      @id
+  originToken      String
+  destinationToken String
+  amount           Float
+  userId           String
+  status           OrderStatus @default(PENDING)
+  createdAt        DateTime    @default(now())
+  updatedAt        DateTime    @updatedAt
+}
+
+model OrderEvent {
+  id          String   @id @default(uuid())
+  aggregateId String
+  type        String
+  payload     Json
+  sequence    Int
+  createdAt   DateTime @default(now())
+
+  @@index([aggregateId, sequence])
+}
