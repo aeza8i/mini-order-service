@@ -22,7 +22,7 @@ This service exposes a clean REST API with Swagger documentation.
 ### 1️⃣ Clone the repository
 
 ```bash
-git clone https://github.com/your-org/orders-service.git
+git clone https://github.com/aeza8i/mini-order-service.git
 cd orders-service
 ```
 
