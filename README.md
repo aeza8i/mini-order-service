@@ -23,7 +23,7 @@ This service exposes a clean REST API with Swagger documentation.
 
 ```bash
 git clone https://github.com/aeza8i/mini-order-service.git
-cd orders-service
+cd mini-order-service
 ```
 
 ### 2️⃣ Install dependencies
