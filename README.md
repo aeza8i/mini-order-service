@@ -1,6 +1,6 @@
 # 🧾 Mini Orders Service
 
-A NestJS microservice using SQLite, Prisma ORM.
+A NestJS microservice using SQLite, Prisma ORM and CQRS + Event Sourcing.
 
 This service exposes a clean REST API with Swagger documentation.
 
